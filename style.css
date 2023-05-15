@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/*nav_bar*/
+#navBar{
+    width: 20vw;
+    height: 100vh;
+    background-color: white;
+}
+
+#navBar>li{
+    display:flex;
+    align-items: center;
+    list-style: none;
+    font-size: 1.25vw;
+    width: 80%;
+    height: 10vh;
+    margin-left: 15%;
+    transition-duration: 0.5s;
+}
+
+#navBar>li:hover{
+    transform: scale(1.1);
+}
+
+#navBar>li>a{
+    color: #7d8da1;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+#navBar>li.active{
+    background-color: rgba(146, 146, 146, 0.089);
+}
+#navBar>li.active>a{
+    color: #747FDD;
+}
+
+#navBar>li.active::before{
+    content: "";
+    width: 6px;
+    height: 100%;
+    background-color: #747FDD;
+    margin-right: 10%;
+}
+
+#logo{
+    display: block;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 5vh;
+    margin-left:2vw;
+    padding-top: 1vh;
+    padding-bottom: 4vh;
+}
+
+#navBar>li:nth-child(7){
+    margin-top: 25vh;
+}
+
+/*Main page*/
+#main, #tasks{
+    position: absolute;
+    left: 20vw;
+    top: 0;
+    height: 100%;
+    width: calc(100vw - 20vw - 2.5%);
+    margin-left: 2.5%;
+}
+
+#tasks{
+    display: none;
+}
+
+
+#stats{
+    display: flex;
+}
+
+#stats>div{
+    display: flex;
+    flex-direction: row;
+    height: 20vh;
+    width: 13.5vw;
+    border-radius: 30px;
+    background-color: aliceblue;
+    margin-right: 2%;
+    font-size: 1.35vw;
+    padding-left: 2.5%;
+    padding-top: 2%;
+    font-weight: bold;
+}
+
+#taskList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: aliceblue;
+    width: calc(13.5vw*3 + 2%*2 + 2.5%*3);
+    height: 45vh;
+    border-radius: 30px;
+    overflow: auto;
+    padding-top: 2.5%;
+}
+
+/* Quick Tasks*/
+#taskList>.task{
+    display: flex;
+    align-items: center;
+    height: 25%;
+    width: 90%;
+    background-color: white;
+    margin-bottom: 1%;
+    border-radius: 20px;
+    padding-left: 10px;
+    color: #677585;
+}
+#taskList>.task>span{
+    margin-left: auto;
+    cursor: pointer;
+}
+
+#topRight{
+    position: absolute;
+    top: 0;
+    width: 20vw;
+    right: 5vw;;
+}
+
+/*********************/
+#facts{
+    background-color: aliceblue;
+    width: 20vw;
+    border-radius: 30px;
+    height: 30vh;
+    padding-left: 30px;
+    padding-top: 20px;
+}
+
+#addTaskInput{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    width: 40vw;
+    height: 12.5vh;
+    border-radius: 10px;
+}
+
+#addTaskInput>input[type=submit]{
+    margin-left: 10%;
+    border:none;
+    background-color: #747FDD;
+    color:white;
+    padding: 2% 4%;
+    cursor: pointer;
+}
+#addTaskInput>input[type=text]{
+    padding: 2% 4%;
+    width: 15vw;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.397);
+}
+#addTaskInput>input[type=text]:focus{
+    border: 1px solid #747FDD;
+}
+
+#taskListTwo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2.5%;
+    width: 40vw;
+    height: 60vh;
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding-top: 2.5%;
+    overflow: auto;
+}
+
+#taskListTwo>.task{
+    display: flex;
+    align-items: center;
+    height: 15%;
+    width: 80%;
+    background-color: white;
+    margin-bottom: 1%;
+    border-radius: 20px;
+    padding-left: 10px;
+    color: #677585;
+}
+
+#taskListTwo>.task>span{
+    margin-left: auto;
+    cursor: pointer;
+}

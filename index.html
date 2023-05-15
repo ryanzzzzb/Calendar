@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" /></head>
+<body>  
+    <div class="container">
+        <nav id="navBar">
+            <span id="logo">平衡</span>
+            <li class="active"><a href="#main" onclick="changeNav(event);"><span class="material-symbols-outlined">dashboard</span>Dashboard</a></li>
+            <li><a href="#tasks" onclick="changeNav(event);"><span class="material-symbols-outlined">checklist</span>Tasks</a></li>
+            <li><a href="#" onclick="changeNav(event);"><span class="material-symbols-outlined">calendar_month</span>Calendar</a></li>
+            <li><a href="#" onclick="changeNav(event);"><span class="material-symbols-outlined">insights</span>Analytics</a></li>
+            <li><a href="#" onclick="changeNav(event);"><span class="material-symbols-outlined">settings</span>Settings</a></li>
+            <li><a href="#" onclick="changeNav(event);"><span class="material-symbols-outlined">logout</span>Logout </a></li>
+        </nav>
+
+        <div id="main">
+            <h1 id="date">Dashboard</h1>
+
+            <div id="stats">
+                <div id="tasksCompleted">
+                    <p>&#x1F468;&#x200D;&#x1F373;<br>Tasks Completed<br>0</p>
+                </div>
+                <div id="tasksDue">
+                    <p>&#x1F92E;<br>Tasks Due<br>0</p>
+                </div>
+                <div id="taskStreak">
+                    <p>&#x1F525;<br>Streak<br>0</p>
+                </div>
+            </div>
+
+            <div id="quickDisplayTask">
+                <h3>Current Tasks</h3>
+                <div id="taskList">
+                    
+                </div>
+            </div>
+
+            <div id="topRight">
+                <h1 id="liveTime"></h1>
+                <div id="facts">
+                    <p>You've wasted so much time</p>
+                    <p>Beta v0.1</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="tasks">
+            <h1>Tasks</h1>
+
+            <div id="addTaskInput">
+                <input type="text" id="addTask" placeholder="Enter Task">
+                <input type="submit" value="Add">
+            </div>
+
+            <div id="taskListTwo"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
